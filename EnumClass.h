@@ -212,7 +212,6 @@ constexpr
 typename std::enable_if<std::is_enum<T>::value && enable_enum_class_bitmask<T>::value, bitmask<T>>::type
 operator|(const bitmask<T>& lhs, const bitmask<T>& rhs)
 {
-	using underlying_type = typename std::underlying_type<T>::type;
 	return bitmask<T>{static_cast<T>(lhs.value | rhs.value)};
 }
 
@@ -320,7 +319,6 @@ constexpr
 typename std::enable_if<std::is_enum<T>::value && enable_enum_class_bitmask<T>::value, bitmask<T>>::type
 operator^(const bitmask<T>& lhs, const bitmask<T>& rhs)
 {
-	using underlying_type = typename std::underlying_type<T>::type;
 	return bitmask<T>{static_cast<T>(lhs.value ^ rhs.value)};
 }
 
