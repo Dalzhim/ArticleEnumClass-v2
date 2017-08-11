@@ -64,6 +64,14 @@ struct bitmask
 	underlying_type value;
 };
 
+template<typename T>
+constexpr
+typename std::enable_if<std::is_enum<T>::value && enable_enum_class_bitmask<T>::value, bitmask<T>>::type
+make_bitmask(const T& t)
+{
+	return bitmask<T>{t};
+}
+
 /**
  * operator&(T, T)
  */

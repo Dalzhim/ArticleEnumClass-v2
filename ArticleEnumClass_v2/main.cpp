@@ -140,4 +140,6 @@ int main(int argc, const char * argv[])
 	static_assert(h(enumerator), "bitmask<T>(enumerator<T>) implicit conversion");
 	
 	static_assert(g(bitmask & t), "It must be possible to isolate a single enumerator from a bitmask");
+	
+	static_assert(make_bitmask(t) == ::bitmask<eTest>{t}, "Must be able to easily make a bitmask from a single enumerator");
 }
