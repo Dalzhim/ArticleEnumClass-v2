@@ -16,21 +16,24 @@ Here are some tables that summarize the return type of all of the operators :
 
 #### Binary bitwise operators
 
-||**`E, E`**|**`E`, `bitmask<E>`**|**`bitmask<E>`, `E`**|**`bitmask<E>`, `bitmask<E>`**|
-|**`operator&`**|`E`|`E`|`E`|`bitmask<E>`|
-|**`operator|`**|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|
-|**`operator^`**|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|
-|**`operator&=`**|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|
-|**`operator|=`**|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|
-|**`operator^=`**|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|`bitmask<E>`|
+ | **`E, E`** | **`E`, `bitmask<E>`** | **`bitmask<E>`, `E`** | **`bitmask<E>`, `bitmask<E>`**
+ | ---------- | --------------------- | --------------------- | ------------------------------
+**`operator&`** | `E` | `E` | `E` | `bitmask<E>`
+**`operator|`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator^`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator&=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator|=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator^=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
 
 #### Unary bitwise operators
 
-||**`E`**|**`bitmask<E>`**|
-|**`operator~`**|`bitmask<E>`|`bitmask<E>`|
+ | **`E`** | **`bitmask<E>`**
+ | ------- | ----------------
+**`operator~`** | `bitmask<E>` | `bitmask<E>`
 
 #### Comparison operators
 
-||**`E, E`**|**`E`, `bitmask<E>`**|**`bitmask<E>`, `E`**|**`bitmask<E>`, `bitmask<E>`**|
-|**`operator==`**|`bool`|`static_assert`|`static_assert`|`bool`|
-|**`operator!=`**|`bool`|`static_assert`|`static_assert`|`bool`|
+ | **`E, E`** | **`E`, `bitmask<E>`** | **`bitmask<E>`, `E`** | **`bitmask<E>`, `bitmask<E>`**
+ | ---------- | --------------------- | --------------------- | ------------------------------
+**`operator==`** | `bool` | `static_assert` | `static_assert` | `bool`
+**`operator!=`** | `bool` | `static_assert` | `static_assert` | `bool`
