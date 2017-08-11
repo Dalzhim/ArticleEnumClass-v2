@@ -86,7 +86,7 @@ typename std::enable_if<std::is_enum<T>::value && enable_enum_class_bitmask<T>::
 operator&(const enumerator<T>& lhs, const enumerator<T>& rhs)
 {
 	using underlying_type = typename std::underlying_type<T>::type;
-	return enumerator<T>{static_cast<T>(lhs.value & rhs.value)};
+	return enumerator<T>{static_cast<T>(static_cast<underlying_type>(lhs.value) & static_cast<underlying_type>(rhs.value))};
 }
 
 /**
