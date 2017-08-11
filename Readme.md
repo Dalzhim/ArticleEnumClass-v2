@@ -19,10 +19,10 @@ Here are some tables that summarize the return type of all of the operators :
  | **`E, E`** | **`E`, `bitmask<E>`** | **`bitmask<E>`, `E`** | **`bitmask<E>`, `bitmask<E>`**
  | ---------- | --------------------- | --------------------- | ------------------------------
 **`operator&`** | `E` | `E` | `E` | `bitmask<E>`
-**`operator|`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator\|`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
 **`operator^`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
 **`operator&=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
-**`operator|=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
+**`operator\|=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
 **`operator^=`** | `bitmask<E>` | `bitmask<E>` | `bitmask<E>` | `bitmask<E>`
 
 #### Unary bitwise operators
